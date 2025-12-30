@@ -233,16 +233,21 @@
         padding: 10px;
       }
 
-      #bookTable {
-        border-collapse: collapse;
-        width: 100%;                  /* full width, responsive */
-        table-layout: auto;            /* adjust columns to data */
-        margin: 20px auto;
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        border-radius: 8px;
-        overflow: hidden;
-      }
+#bookTable {
+  border-collapse: collapse;
+  width: 100%; /* full width, responsive */
+  table-layout: fixed; /* force table to fit container */
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow-x: auto; /* add horizontal scroll if needed */
+  display: block; /* make table block-level for overflow */
+}
+
+#bookTable th, #bookTable td {
+  word-wrap: break-word; /* wrap long text in cells */
+}
     }
   </style>
 </head>
